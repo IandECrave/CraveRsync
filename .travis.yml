@@ -8,6 +8,6 @@ git:
 
 script:
      - cd rsync
-     - pip3 install --user commonmark
+     - sudo pip3 install --user commonmark
      - ./configure
      - make -j $(nproc)
