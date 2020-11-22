@@ -6,8 +6,13 @@ compiler:
 git:
      depth: 1
 
+before_install:
+     - sudo apt-get update
+     - sudo apt-get install python3
+     - sudo apt-get install pip3
+     - sudo pip3 install --user commonmark
+
 script:
      - cd rsync
-     - sudo pip install --user commonmark
      - ./configure
      - make -j $(nproc)
