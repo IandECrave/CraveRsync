@@ -12,12 +12,5 @@ script:
      - sudo apt-get install python3
      - sudo apt-get install -y python3-pip
      - pip3 install --user commonmark
-     - sudo apt install -y gcc g++ gawk autoconf automake python3-cmarkgfm
-     - sudo apt install -y acl libacl1-dev
-     - sudo apt install -y attr libattr1-dev
-     - sudo apt install -y libxxhash-dev
-     - sudo apt install -y libzstd-dev
-     - sudo apt install -y libzlz4-dev
-     - sudo apt install -y libssl-dev
-     - ./configure
+     - ./configure --disable-xxhash --disable-zstd --disable-lz4
      - make -j $(nproc)
