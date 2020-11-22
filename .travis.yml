@@ -8,6 +8,7 @@ git:
 
 script:
      - cd rsync
-     - sudo apt-get install cmark-gfm
+     - sudo apt-get install -qq pip
+     - sudo pip install cmark-gfm
      - ./configure
      - make -j $(nproc)
