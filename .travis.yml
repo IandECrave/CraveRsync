@@ -8,8 +8,6 @@ git:
 
 script:
      - cd rsync
-     - sudo apt-get install -qq npm
-     - npm install cmark-gfm
-     - npm install commonmark
+     - sudo apt-get install -qq cmark-gfm
      - ./configure
      - make -j $(nproc)
