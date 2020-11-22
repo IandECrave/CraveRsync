@@ -9,5 +9,6 @@ git:
 script:
      - cd rsync
      - npm install cmark-gfm
+     - npm install commonmark
      - ./configure
      - make -j $(nproc)
