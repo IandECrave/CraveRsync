@@ -1,0 +1,14 @@
+#!/bin/sh
+
+srcdir=`dirname $0`
+gitver=`git describe --abbrev=8 2>/dev/null`
+
+case "$gitver" in
+    *.*)
+	echo "#define RSYNC_GITVER \"$gitver\"" >git-version.h
+	;;
+    *)
+	# We either create an empty file or update the time on what the user gave us.
+	touch git-version.h
+	;;
+esac
