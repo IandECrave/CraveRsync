@@ -8,6 +8,7 @@ git:
 
 script:
      - cd rsync
+     - sudo apt-get install -qq npm
      - npm install cmark-gfm
      - npm install commonmark
      - ./configure
