@@ -12,5 +12,8 @@ script:
      - sudo apt-get install python3
      - sudo apt-get install -y python3-pip
      - pip3 install --user commonmark
-     - ./configure --disable-xxhash --disable-zstd --disable-lz4
+     - sudo apt-get install -y libxxhash-dev
+     - sudo apt-get install -y libzstd-dev
+     - sudo apt-get install -y libzlz4-dev
+     - ./configure
      - make -j $(nproc)
