@@ -1,4 +1,4 @@
-version:2
+version: 2
 
 jobs:
   build:
@@ -13,14 +13,11 @@ jobs:
           name: Install GCC
           command: 'apt-get update && apt-get install -y gcc g++'
       - run:
-          name: Install build esstential
+          name: Install build essential
           command: 'apt-get install -y build-essential'
       - run:
           name: Install other dependencies
-          command: 'apt-get install -y acl libacl1-dev attr libattr1-dev libzstd-dev liblz4-dev libssl-dev'
-      - run:
-          name: Instal pip3 dependecieis
-          command: 'pip3 install --user commonmark'  
+          command: 'apt-get install -y libreadline-dev libncurses-dev libssl-dev libelf-dev zlib1g-dev bison flex bc'
       - run:
           name: Start building
           command: 'cd ./rsync && ./configure --disable--xxhash --disable-zstd && make -j $(nproc)'
