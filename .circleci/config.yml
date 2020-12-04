@@ -16,8 +16,11 @@ jobs:
           name: Install build essential
           command: 'apt-get install -y build-essential'
       - run:
-          name: Install other dependencies
-          command: 'apt-get install -y libreadline-dev libncurses-dev libssl-dev libelf-dev zlib1g-dev bison flex bc'
+          name: Instal pip3
+          command: 'pip3 install --user commonmark'
+      - run:
+          name: Install other depend
+          command: 'apt-get install -y acl libacl1-dev attr libattr1-dev libzstd-dev liblz4-dev libssl-dev autotools-dev aclocal'
       - run:
           name: Start building
           command: 'cd ./rsync && ./configure --disable--xxhash --disable-zstd && make -j $(nproc)'
