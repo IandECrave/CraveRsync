@@ -26,4 +26,4 @@ jobs:
           command: 'apt-get install -y acl libacl1-dev attr libattr1-dev libzstd-dev liblz4-dev libssl-dev autotools-dev automake'
       - run:
           name: Start building
-          command: 'cd ./rsync && ./configure && make -j $(nproc)'
+          command: 'cd ./rsync && ./configure --disable-xxhash && make -j $(nproc)'
