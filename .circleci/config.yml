@@ -23,7 +23,7 @@ jobs:
           command: 'pip3 install --user commonmark'
       - run:
           name: Install other depend
-          command: 'apt-get install -y acl libacl1-dev attr libattr1-dev libzstd-dev liblz4-dev libssl-dev autotools-dev aclocal'
+          command: 'apt-get install -y acl libacl1-dev attr libattr1-dev libzstd-dev liblz4-dev libssl-dev autotools-dev automake'
       - run:
           name: Start building
           command: 'cd ./rsync && ./configure --disable--xxhash --disable-zstd && make -j $(nproc)'
