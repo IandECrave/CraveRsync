@@ -16,7 +16,10 @@ jobs:
           name: Install build essential
           command: 'apt-get install -y build-essential'
       - run:
-          name: Instal pip3
+          name: Install pip3
+          command: 'apt-get install -y python3-pip'
+      - run:
+          name: Install commonmark
           command: 'pip3 install --user commonmark'
       - run:
           name: Install other depend
